@@ -1,0 +1,152 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+    background: #3B3F45;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #4A4F56;
+}
+
+.header_title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FF8984;
+    margin-top: 20px;
+}
+
+.header_subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FF8984;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* Main */
+
+.list {
+    width: 100%;
+    max-width: 550px;
+    margin: 20px auto;
+}
+
+.list_item {
+    min-height: 50px;
+}
+
+.list_item:nth-child(even) {
+    background: #88839E;
+}
+
+.list_item:nth-child(odd) {
+    background: #7A7593;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+    margin: 0 12px;
+    width: 19px;
+    height: 19px;
+}
+
+.custom_checkbox {
+    border: 2px solid white;
+    background-color: #FFFFFF;
+    margin: 12px;
+    width: 16px;
+    height: 16px;
+}
+
+.custom_checkbox:after {
+    content: '\2714';
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    display: none;
+}
+
+.checkbox:checked + .custom_checkbox:after {
+    display: block;
+}
+
+.list_item_description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    min-height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.item_comment {
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.list_item_description:hover {
+    background: #625E77;
+    border-top: 3px solid #FFFFFF;
+    border-bottom: 3px solid #FFFFFF;
+    transition: all .1s ease-in;
+}
+
+.list_item_description:active {
+    background-color: #FF8984;
+    transition: all .1s ease-in;
+}
+
+.checkbox:checked ~ .item_title, .checkbox:checked ~ .item_comment {
+    color: #9B96AC;
+}
+
+.item_title {
+    position: relative;
+}
+
+.item_comment:before {
+    content: '';
+    display: none;
+    width: 100%;
+    border-bottom: solid 1px #9B96AC;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.checkbox:checked ~ .item_title .item_comment:before {
+    display: inline;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    max-width: 550px;
+    margin: 45px auto;
+    background-color: #4A4F56;
+    padding: 12px 0;
+}
+
+.footer_text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FF8984;
+    text-align: center;
+}
